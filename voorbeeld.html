@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Mockup — Huisstijl</title>
+  <style>
+    :root{
+      --primary: #2C7BE5; /* blauw */
+      --secondary: #00C9A7; /* turquoise */
+      --accent: #FFB946; /* oranje-geel */
+      --neutral-dark: #2E2E2E; /* donkergrijs */
+      --neutral-light: #F7F9FC; /* licht */
+      --card-radius: 14px;
+      --container-width: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:var(--neutral-light);
+      color:var(--neutral-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:var(--container-width);margin:0 auto;padding:24px}
+
+    /* Header */
+    header.header{background:var(--primary);color:#fff}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--container-width);margin:0 auto;padding:18px}
+    .logo{font-weight:700;font-size:1.125rem}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:20px;font-weight:600}
+    nav a:hover{color:var(--secondary)}
+
+    /* Hero */
+    .hero{padding:64px 24px;text-align:center}
+    .hero h1{font-size:2rem;margin:0 0 12px}
+    .hero p{max-width:760px;margin:0 auto 20px;color:rgba(46,46,46,0.85)}
+    .btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;cursor:pointer;border:0}
+    .btn-cta{background:var(--accent);color:var(--neutral-dark);box-shadow:0 8px 22px rgba(43,40,20,0.12)}
+    .btn-cta:hover{transform:translateY(-2px)}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:1fr;gap:20px;padding:18px}
+    .card{background:#fff;border-radius:var(--card-radius);padding:20px;box-shadow:0 8px 20px rgba(11,22,40,0.06)}
+    .card h3{color:var(--primary);margin:0 0 10px}
+    .card p{color:rgba(46,46,46,0.82);margin:0 0 16px}
+    .btn-secondary{background:var(--secondary);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
+    .btn-secondary:hover{opacity:0.95}
+
+    /* Footer */
+    footer{background:var(--neutral-dark);color:#fff;padding:18px;text-align:center;border-radius:12px;margin-top:28px}
+
+    /* Responsive */
+    @media (min-width:760px){
+      .hero h1{font-size:2.75rem}
+      .header-inner{padding:12px}
+      .features{grid-template-columns:repeat(3,1fr);gap:24px;padding:28px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">Mijn Website</div>
+      <nav aria-label="Hoofd navigatie">
+        <a href="#">Home</a>
+        <a href="#">Over</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero container" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Welkom op onze website</h1>
+      <p>Een eenvoudige, standalone HTML-mockup die het huisstijl-kleurenschema laat zien. Gebruik dit bestand als startpunt voor je ontwerp.</p>
+      <a href="#" class="btn btn-cta" role="button">Call to Action</a>
+    </section>
+
+    <!-- Features / Cards -->
+    <section class="features container" aria-label="Features">
+      <article class="card">
+        <h3>Feature 1</h3>
+        <p>Korte beschrijving van feature nummer 1. De titel gebruikt de primaire kleur om aandacht te trekken.</p>
+        <a href="#" class="btn btn-secondary" role="button">Meer info</a>
+      </article>
+
+      <article class="card">
+        <h3>Feature 2</h3>
+        <p>Omschrijving van feature 2 — hier zie je de secundaire kleur in actie op buttons en hover-states.</p>
+        <a href="#" class="btn btn-secondary" role="button">Meer info</a>
+      </article>
+
+      <article class="card">
+        <h3>Feature 3</h3>
+        <p>Een korte tekst die laat zien hoe content, kaarten en witruimte samenwerken met het kleurenpalet.</p>
+        <a href="#" class="btn btn-secondary" role="button">Meer info</a>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
